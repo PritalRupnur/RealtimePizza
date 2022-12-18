@@ -1,0 +1,55 @@
+@import './variables';
+
+//$primary:red;
+body{
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    color:$dark;
+    height:4000px;
+}
+nav li:last-child a {
+
+    background:$primary;
+    &:hover{
+        background:$primary-hover;
+    }
+}
+nav li a{
+    //hover works very fast so to work it smoothly we need to give transition
+    //transition property should be same at all places.for that we will exract it in a varianle.
+    transition: $smooth;
+    //cscc way to do hovering effect
+    &:hover{
+        color:$primary;
+    }
+   
+}
+
+section.hero{
+    background: $secondary;
+}
+.size{
+    background:$secondary;
+}
+.add-to-cart{
+    border:2px solid $primary;
+    color:$primary;
+    transition:$smooth;
+    &:hover{
+        background:$primary;
+        border-color:$pure;
+        color:$pure;
+    }
+}
+.btn-primary{
+
+    background: $primary;
+    transition: $smooth;
+    &:hover{
+        background:$primary-hover;
+    }
+}
+
+section.cart{
+    background:$secondary
+}
